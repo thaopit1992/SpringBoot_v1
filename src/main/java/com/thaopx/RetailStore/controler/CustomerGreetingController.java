@@ -1,6 +1,7 @@
 package com.thaopx.RetailStore.controler;
 
 import com.thaopx.RetailStore.model.Greeting;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,6 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 @RequestMapping("/v1")
+@Scope("prototype")
 public class CustomerGreetingController {
 
     private static final String greetingTemplate = "Hello, %s %s";
