@@ -18,7 +18,7 @@ public class CustomerGreetingController {
     private final AtomicLong counter = new AtomicLong();
     @GetMapping("/greeting")
     public Greeting greeting(@RequestParam(value = "gender", defaultValue = "0") boolean gender,
-                             @RequestParam(value = "custommerName", defaultValue = "Customer") String customerName
+                             @RequestParam(value = "customerName", defaultValue = "Customer") String customerName
     ){
         return Greeting.builder()
                 .id(counter.incrementAndGet())
